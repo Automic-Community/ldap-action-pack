@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBI name="PCK.AUTOMIC_LDAP.PRV.INCLUDE.PP_MODIFY_DN">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[:SET &result# = "0"
+
+:SET &hnd# = PREP_PROCESS_REPORT(,,,"*")
+:PROCESS &hnd#
+:   SET &line# = GET_PROCESS_LINE(&hnd#,1)
+:   SET &line# = STR_TRIM(&line#)
+:   SET &pos# = STR_FIND(&line#,"LDAP-RESULT: ")
+:   IF &pos# > 0
+:     SET &pos# = &pos#  + 13
+:     SET &line# = MID(&line#,&pos#)
+:     SET &result# = &line#
+:   ENDIF
+:ENDPROCESS
+:PSET &UC4RB_OUT_LDAP_NEW_DN# = &result#]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

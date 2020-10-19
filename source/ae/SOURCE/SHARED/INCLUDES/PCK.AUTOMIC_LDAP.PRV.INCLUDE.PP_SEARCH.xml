@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBI name="PCK.AUTOMIC_LDAP.PRV.INCLUDE.PP_SEARCH">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[:SET &counter# = 0
+:SET &variableName# = "PCK.AUTOMIC_LDAP.PRV.VARA.TEMP.PP_SEARCH_RESULT.&$ACTIVATOR_RUNID#.&$PHYS_DATE_YYYYMMDD#"
+:SET &variablePath# = ""
+:SET &variableLine# = ""
+:SET &key# = ""
+:SET &startRecording# = "0"
+:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CREATE_PASS_VALUES_VARIABLE
+
+:IF &ret# <> 0
+:  MODIFY_STATE RETCODE = &ret#
+:ELSE
+:  SET &hnd# = PREP_PROCESS_REPORT(,,,"*")
+:  PROCESS &hnd#
+:     SET &line# = GET_PROCESS_LINE(&hnd#,1)
+:     SET &line# = STR_TRIM(&line#)
+:     SET &pos# = STR_FIND(&line#,"LDAP-Search-Result: ")
+:     SET &posCount# = STR_FIND(&line#,"LDAP-Search-Result-Count: ")
+:     IF &posCount# > 0
+:       SET &posCount# = &posCount# + 26
+:       SET &line# = MID(&line#,&posCount#)
+:       PSET &UC4RB_OUT_LDAP_RESULT_COUNT# = &line#
+:     ENDIF
+:     IF &pos# > 0
+:       SET &pos# = &pos#  + 20
+:       SET &line# = MID(&line#,&pos#)
+:       SET &key# = &line#;
+:       SET &startRecording# = "1"
+:     ELSE
+:       IF &startRecording# = "1"
+:         IF &line# = ""
+:           IF &variableLine# = ""
+:             SET &variableLine# = "none"
+:           ENDIF
+:           SET &length# = STR_LENGTH(&variableLine#)
+:           SET &length# = SUB(&length#, 1)
+:           IF &length# > 1
+:             SET &variableLine# = STR_CUT(&variableLine#, 1, &length#)
+:             IF &key# <> ""
+:               IF &variableLine# <> ""
+:                 PUT_VAR &variableName#, "&key#", "&variableLine#"
+:               ENDIF
+:             ENDIF
+:             SET &counter# = ADD(&counter#,1)
+:             SET &key# = ""
+:             SET &variableLine# = ""
+:           ENDIF 
+:         ELSE
+:           SET &line# = STR_TRIM(&line#)
+:           SET &lengthLine# = STR_LENGTH(&line#)
+:           SET &lengthResult# = STR_LENGTH(&variableLine#)
+:           SET &currentlength# = &lengthLine# + &lengthResult#
+:           IF &currentlength# < 1023
+:             SET &variableLine# = STR_CAT(&variableLine#, &line#)
+:             SET &variableLine# = STR_CAT(&variableLine#, ",")
+:           ENDIF
+:         ENDIF
+:       ENDIF
+:     ENDIF
+:  ENDPROCESS
+:ENDIF
+:PSET &UC4RB_OUT_LDAP_SEARCH# = "&variableName#"]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

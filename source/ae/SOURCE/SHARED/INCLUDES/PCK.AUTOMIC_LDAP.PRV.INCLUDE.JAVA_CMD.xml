@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBI name="PCK.AUTOMIC_LDAP.PRV.INCLUDE.JAVA_CMD">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[:SWITCH &$PLATFORM#
+:CASE "WINDOWS"
+:SET &UC4RB_JAVA_CMD# = "java -cp ""&$AGENT_RESOURCES_CLIENT#ldap-tool.jar;&$AGENT_RESOURCES_CLIENT#unboundid-ldapsdk.jar"" com.automic.packages.feature.AraFileCmd"
+:CASE "UNIX"
+:SET &UC4RB_JAVA_CMD# = "java -cp ""&$AGENT_RESOURCES_CLIENT#ldap-tool.jar:&$AGENT_RESOURCES_CLIENT#unboundid-ldapsdk.jar"" com.automic.packages.feature.AraFileCmd"
+:ENDSWITCH]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<DOCU name="PCK.AUTOMIC_LDAP.PUB.DOC">
+<HEADER state="1">
+<Title>LDAP</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[Actions to access LDAP.
+
+=Supported versions=
+
+See http://docs.automic.com/compatibility?len=Package.LDAP&comp=PCK.AUTOMIC_LDAP&version=1.0.1
+
+
+=Rollback=
+
+The actions getting some system information don't need rollbacks, because they do not change the state of your system. Such methods are AUTHENTICATE_USER, CHECK_ATTRIBUTE, SEARCH.
+
+Actions potentially changing the state of your system (e.g MODIFY, MODIFY_ATTRIBUTE, MODIFY_DN, DELETE and ADD) do not have rollbacks defined yet.
+]]></DOC>
+</DOCU_Docu>
+</DOCU>
+</uc-export>

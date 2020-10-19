@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<PRPT name="PCK.AUTOMIC_LDAP.PRV.PROMPTSET.SEARCH">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="506" icon="PRPT" id="PRPTS" left="0" top="0" width="420"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Parameters"><properties><entry name="text">Parameters</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_HOSTs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Host" tooltip="The host name of the directory server" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Host</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_HOSTs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The host name of the directory server</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_PORTs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Port" tooltip="The port number of the directory server" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Port</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_PORTs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The port number of the directory server</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_USERs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="User" tooltip="The DN of the user who will be authenticated" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">User</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_USERs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The DN of the user who will be authenticated</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_PASSWORDs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="1" text="Password" tooltip="The users password for authentication" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Password</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_PASSWORDs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">1</entry>
+            <entry name="tooltip">The users password for authentication</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_LDAP_AUTH_METHODs.00" nl="1" quotes="" strict="1" text="Authentication Method" tooltip="Specifies the authentication method.See &quot;Authorize User&quot; for further information" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+
+
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_LDAP.PRV.VARA.AUTHENTICATION_METHOD</entry>
+            <entry name="text">Authentication Method</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_AUTH_METHODs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Specifies the authentication method.See &quot;Authorize User&quot; for further information</entry>
+            <entry name="customfield"/>
+            <entry name="dynamic">0</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </combo><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_BASE_DNs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="BaseDN" tooltip="Specifies the base DN for the search. Only entries at or below this location in the server (based on the scope) will be considered potential matches" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">BaseDN</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_BASE_DNs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Specifies the base DN for the search. Only entries at or below this location in the server (based on the scope) will be considered potential matches</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_LDAP_SCOPEs.00" nl="1" quotes="" strict="1" text="Scope" tooltip="Specifies the range of entries relative to the base DN that may be considered potential matches." vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+
+
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_LDAP.PRV.VARA.SCOPE</entry>
+            <entry name="text">Scope</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_SCOPEs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Specifies the range of entries relative to the base DN that may be considered potential matches.</entry>
+            <entry name="customfield"/>
+            <entry name="dynamic">0</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </combo><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_SIZE_LIMITs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Size Limit" tooltip="Specifies the maximum number of entries that should be returned from the search. A value of zero indicates that there should not be any limit enforced." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_NUMERIC</entry>
+            <entry name="text">Size Limit</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_SIZE_LIMITs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Specifies the maximum number of entries that should be returned from the search. A value of zero indicates that there should not be any limit enforced.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_TIME_LIMITs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Time Limit" tooltip="Specifies the maximum length of time in seconds that the server should spend processing the search. A value of zero indicates that there should not be any limit enforced." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_NUMERIC</entry>
+            <entry name="text">Time Limit</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_TIME_LIMITs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Specifies the maximum length of time in seconds that the server should spend processing the search. A value of zero indicates that there should not be any limit enforced.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_LDAP_RESULT_FORMATs.00" nl="1" quotes="" strict="1" text="Result Format" tooltip="Indicates whether matching entries should include only attribute names, only values or both attribute names and values. " vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+
+
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_LDAP.PRV.VARA.RESULT_FORMAT</entry>
+            <entry name="text">Result Format</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_RESULT_FORMATs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Indicates whether matching entries should include only attribute names, only values or both attribute names and values. </entry>
+            <entry name="customfield"/>
+            <entry name="dynamic">0</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </combo><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_FILTERs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Filter" tooltip="Specifies the criteria for determining which entries should be returned, syntax described in RFC 4515" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Filter</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_FILTERs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Specifies the criteria for determining which entries should be returned, syntax described in RFC 4515</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_LDAP_ATTRIBUTESs.00" nl="1" quotes="" strict="1" text="Attributes" tooltip="Options: None: Indicates that no attributes should be returned. That is, only the DNs of matching entries will be returned. All:  Indicates that all user attributes should be included in matching entries. All operational: Indicates that all operational attributes should be included in matching entries. Specific: Indicates that only attributes set in &apos;Specific Attributes&apos; will be included." vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+
+
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_LDAP.PRV.VARA.ATTRIBUTES</entry>
+            <entry name="text">Attributes</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_ATTRIBUTESs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Options:
+None: Indicates that no attributes should be returned. That is, only the DNs of matching entries will be returned.
+All:  Indicates that all user attributes should be included in matching entries.
+All operational: Indicates that all operational attributes should be included in matching entries.
+Specific: Indicates that only attributes set in &apos;Specific Attributes&apos; will be included.</entry>
+            <entry name="customfield"/>
+            <entry name="dynamic">0</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </combo><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_SPEC_ATTRIBUTESs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Specific Attributes" tooltip="Used to define a set of attributes which will be included in the search result if &apos;Attributes&apos; is set to &apos;Specific&apos;. A single attribute (eg: &quot;[surname]&quot;) or a list of attributes can be provided enclosed by square brackets (eg: &quot;[surname], [title] - [phone]&quot;)" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Specific Attributes</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_SPEC_ATTRIBUTESs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Used to define a set of attributes which will be included in the search result if &apos;Attributes&apos; is set to &apos;Specific&apos;. A single attribute (eg: &quot;[surname]&quot;) or a list of attributes can be provided enclosed by square brackets (eg: &quot;[surname], [title] - [phone]&quot;)</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_FILE_PATHs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Output File Path" tooltip="Accepts a local file path. If defined, the result will be save in LDIF format at the specified location. " upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Output File Path</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_FILE_PATHs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Accepts a local file path. If defined, the result will be save in LDIF format at the specified location. </entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_LDAP_FAILs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Fail if Result Count Below" tooltip="Specifies if the job should fail in case the search found less then X amount of entries. If set to 0, the job will not fail in case no entry was found." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_NUMERIC</entry>
+            <entry name="text">Fail if Result Count Below</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_LDAP_FAILs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Specifies if the job should fail in case the search found less then X amount of entries. If set to 0, the job will not fail in case no entry was found.</entry>
+            <entry name="customfield"/>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_LDAP_HOSTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_HOST#" ReadFromTable="OPSE"></UC4RB_LDAP_HOSTs.00><UC4RB_LDAP_PORTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_PORT#" ReadFromTable="OPSE"></UC4RB_LDAP_PORTs.00><UC4RB_LDAP_USERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_USER#" ReadFromTable="OPSE"></UC4RB_LDAP_USERs.00><UC4RB_LDAP_PASSWORDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_PASSWORD#" ReadFromTable="OPSE"></UC4RB_LDAP_PASSWORDs.00><UC4RB_LDAP_AUTH_METHODs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_AUTH_METHOD#" ReadFromTable="OPSE">SASL Digest-MD5</UC4RB_LDAP_AUTH_METHODs.00><UC4RB_LDAP_BASE_DNs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_BASE_DN#" ReadFromTable="OPSE"></UC4RB_LDAP_BASE_DNs.00><UC4RB_LDAP_SCOPEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_SCOPE#" ReadFromTable="OPSE">Sub</UC4RB_LDAP_SCOPEs.00><UC4RB_LDAP_SIZE_LIMITs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_SIZE_LIMIT#" ReadFromTable="OPSE">0</UC4RB_LDAP_SIZE_LIMITs.00><UC4RB_LDAP_TIME_LIMITs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_TIME_LIMIT#" ReadFromTable="OPSE">0</UC4RB_LDAP_TIME_LIMITs.00><UC4RB_LDAP_RESULT_FORMATs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_RESULT_FORMAT#" ReadFromTable="OPSE">Both</UC4RB_LDAP_RESULT_FORMATs.00><UC4RB_LDAP_FILTERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_FILTER#" ReadFromTable="OPSE"></UC4RB_LDAP_FILTERs.00><UC4RB_LDAP_ATTRIBUTESs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_ATTRIBUTES#" ReadFromTable="OPSE">None</UC4RB_LDAP_ATTRIBUTESs.00><UC4RB_LDAP_SPEC_ATTRIBUTESs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_SPEC_ATTRIBUTES#" ReadFromTable="OPSE"></UC4RB_LDAP_SPEC_ATTRIBUTESs.00><UC4RB_LDAP_FILE_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_FILE_PATH#" ReadFromTable="OPSE"></UC4RB_LDAP_FILE_PATHs.00><UC4RB_LDAP_FAILs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_LDAP_FAIL#" ReadFromTable="OPSE">0</UC4RB_LDAP_FAILs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</PRPT>
+</uc-export>

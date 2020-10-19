@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBI name="PCK.AUTOMIC_LDAP.PRV.INCLUDE.DELETE">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[!:INCLUDE PCK.AUTOMIC_LDAP.PRV.INCLUDE.ATTACH
+:INCLUDE PCK.AUTOMIC_LDAP.PRV.INCLUDE.JAVA_CMD
+
+:JCL_CONCAT_CHAR "?"
+&UC4RB_JAVA_CMD# ldap LDAPFeature delete ?
+&UC4RB_LDAP_HOST# &UC4RB_LDAP_PORT# "&UC4RB_LDAP_USER#" &UC4RB_LDAP_PASSWORD# ?
+"&UC4RB_LDAP_AUTH_METHOD#" "&UC4RB_LDAP_DN#" "&UC4RB_LDAP_FAIL#"
+:JCL_CONCAT_CHAR]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>
